@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Special Gift - Book</title>
+  <style>
+    /* Body and Background */
+    body {
+      background: linear-gradient(135deg, #f8cdda, #1e3c72); /* Soft gradient background */
+      font-family: 'Poppins', sans-serif; /* Modern, clean font */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+      text-align: center;
+    }
+
+    /* Book Container */
+    .book-container {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      max-width: 700px;
+      width: 100%;
+      padding: 40px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      transform: translateY(10%);
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Title Styling */
+    h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #ff6347, #ff4500); /* Gradient text effect */
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 30px;
+      letter-spacing: 2px;
+    }
+
+    /* Page Styling */
+    .page {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .page.active {
+      display: block;
+      opacity: 1;
+    }
+
+    /* Page Titles */
+    h3 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    /* Paragraph Styling */
+    p {
+      font-size: 1.25rem;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 30px;
+      transition: color 0.3s ease;
+    }
+
+    /* Button Styling */
+    button {
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      color: white;
+      background-color: #ff6347;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(255, 99, 71, 0.4);
+      transition: all 0.3s ease;
+      margin-top: 20px; /* Added margin to space out from the audio player */
+    }
+
+    button:hover {
+      background-color: #ff4500;
+      transform: scale(1.1);
+      box-shadow: 0 6px 25px rgba(255, 99, 71, 0.6);
+    }
+
+    /* Audio Player Styling */
+    audio {
+      width: 80%;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #ff6347;
+      border-radius: 20px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      h2 {
+        font-size: 2.2rem;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      button {
+        font-size: 1rem;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="book-container">
+    <h2>Your Special Gift Book</h2>
+
+    <div class="page active" id="page1">
+      <h3>A Song Just for You</h3>
+      <p>Listen to this beautiful song: "Meri Jindagi Tum Hi Ho"</p>
+      
+      <!-- Audio Player -->
+      <audio controls>
+        <source src="song.html.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+
+      <!-- Button Positioned Below the Audio Player -->
+      <button onclick="nextPage()">Next</button>
+    </div>
+
+    <div class="page" id="page2">
+      <h3>Only for You, My Love</h3>
+      <p>Happy New Year, my love! This year, every moment will be a celebration of you. With every thought, every beat of my heart, I am reminded of how deeply I care for you. I wish you a life filled with sweetness, joy, and endless possibilities, and I’m excited for all the memories we’ll create together in this new year. Let’s make it the best one yet, full of love, laughter, and happiness.</p>
+      <button onclick="window.location.href='third.html'">Go to Next Page</button>
+    </div>
+  </div>
+
+  <script>
+    function nextPage() {
+      document.getElementById('page1').classList.remove('active');
+      document.getElementById('page2').classList.add('active');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy New Year 2025!</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Poppins', sans-serif; /* Clean and modern font */
+      background: linear-gradient(135deg, #ff6f61, #ff9f00); /* Festive vibrant gradient */
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+      overflow: hidden;
+    }
+
+    /* Title Styling */
+    h1 {
+      font-size: 4.5rem;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4); /* Strong text shadow */
+      margin-bottom: 30px;
+      font-weight: 900;
+      animation: fadeInText 1.5s ease-out;
+    }
+
+    /* Message Section */
+    #message {
+      font-size: 1.5rem;
+      margin-top: 20px;
+      font-style: italic;
+      animation: slideIn 1.5s ease-out;
+      color: #fff;
+      letter-spacing: 1px;
+      margin-bottom: 30px;
+    }
+
+    /* Paragraph Styling */
+    .paragraph {
+      font-size: 1.25rem;
+      line-height: 1.8;
+      max-width: 700px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      color: #fff;
+      font-weight: 300;
+      animation: fadeInText 3s ease-out forwards;
+      padding: 0 20px;
+    }
+
+    /* Staggered Animation Delays for Paragraphs */
+    .paragraph:nth-child(odd) {
+      animation-delay: 1s;
+    }
+
+    .paragraph:nth-child(even) {
+      animation-delay: 2s;
+    }
+
+    /* Button Styling */
+    button {
+      padding: 16px 32px;
+      font-size: 1.3rem;
+      margin: 20px 15px;
+      background-color: #ff4c00; /* Warm orange color */
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+      transition: all 0.3s ease;
+      font-weight: 600;
+      text-transform: uppercase;
+      outline: none;
+    }
+
+    button:hover {
+      background-color: #ff8c00; /* Lighter orange for hover */
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+      transform: scale(1.1);
+    }
+
+    button:active {
+      transform: scale(1.05);
+    }
+
+    /* Keyframes for Animations */
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes fadeInText {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideIn {
+      0% { transform: translateX(-100%); opacity: 0; }
+      100% { transform: translateX(0); opacity: 1; }
+    }
+
+    /* Responsive Design for Mobile */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 3.2rem;
+      }
+
+      .paragraph {
+        font-size: 1.1rem;
+        padding: 0 10px;
+      }
+
+      button {
+        padding: 14px 28px;
+        font-size: 1.1rem;
+      }
+
+      #message {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Happy New Year, My Love!</h1>
+    <p id="message">I have something special for you. Would you like to see it?</p>
+
+    <!-- Additional paragraphs with dynamic animations -->
+    <p class="paragraph">As we celebrate this new year, I look back on the beautiful memories we've created. Every laugh, every hug, and every special moment we’ve shared is a treasure to me. While those memories are so precious, what I truly long for is to make even more of them this year, together. I want us to live all of these beautiful moments for real, hand in hand. Please, love me even more this year, as I love you with all my heart.</p>
+    <p class="paragraph">You make my world brighter, and I look forward to making more memories with you in 2025!</p>
+    <p class="paragraph">I want to wish you all the happiness in the world. May this year bring you everything your heart desires, and may you always know how loved you are. ❤️</p>
+
+    <!-- Yes/No buttons -->
+    <button onclick="window.location.href='sen.html'">Yes</button>
+    <button onclick="alert('Okay, maybe next time! Wishing you the best for 2025!')">No</button>
+  </div>
+</body>
+</html>
